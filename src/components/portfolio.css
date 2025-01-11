@@ -1,0 +1,754 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(37, 34, 34);
+}
+
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #000;
+  background-image: radial-gradient(
+      circle at top right,
+      rgba(121, 68, 154, 0.13),
+      transparent
+    ),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+}
+
+#canvas {
+  display: none;
+}
+
+/* Portfolio navbar css started */
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+nav > .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+nav > div > div > a {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.scrolled {
+  padding: 15px 0;
+  background: crimson;
+}
+
+.scrolled > div > div > a > span {
+  color: #fff;
+}
+
+.hamburger {
+  height: 25px;
+  width: 25px;
+}
+
+.navbar-all-devices {
+  display: block;
+  list-style-type: none;
+  position: fixed;
+  background: #111;
+  height: 110vh;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 45px;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.active {
+  left: 0;
+}
+
+.span-p {
+  color: crimson;
+}
+
+.navbar-all-devices > li {
+  display: block;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.navbar-all-devices > li > a {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.navbar-all-devices > li > a:hover {
+  color: crimson;
+}
+
+.navbar-all-devices > li > .hover-element:hover {
+  color: #111;
+}
+
+.icon {
+  position: fixed;
+  z-index: 999;
+  right: 40px;
+}
+
+/* Home css started */
+
+.home {
+  display: flex;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+  width: 385.5px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.max-width {
+  width: 100%;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.max-width .text-1 {
+  font-size: 27px;
+}
+
+.max-width .text-2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.max-width .text-3 {
+  font-size: 27px;
+  margin: 5px 0;
+}
+
+.max-width > .text-3 > span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.hire-me {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.hire-me:hover {
+  background: transparent;
+  border: 1px solid crimson;
+  color: crimson;
+}
+
+.developer {
+  display: none;
+}
+
+/* About page css started */
+
+.about,
+.skills,
+.projects,
+.contact,
+footer {
+  font-family: "Poppins", sans-serif;
+  width: 385.5px;
+  color: #fff;
+  overflow: hidden;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  content: "Who i am";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 0 5px;
+  background: #011420;
+  transform: translateX(-50%);
+}
+
+.about-content .text {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-content a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.about-content a:hover {
+  background: transparent;
+  border: 1px solid crimson;
+  color: crimson;
+}
+
+/* Skills page css started */
+
+.skills .title::before {
+  background: #fff;
+}
+
+.skills .title::after {
+  content: "My top skills";
+}
+
+.progress {
+  padding: 12px 0;
+}
+
+.skill-content {
+  border: 2px solid crimson;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.progress h3 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.bar {
+  border: 2px solid crimson;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.bar span {
+  display: block;
+  background: crimson;
+  height: 7px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.bar .html,
+.css,
+.javascript,
+.react,
+.python,
+.node,
+.sql,
+.mongo {
+  width: 0%;
+}
+
+.skills:hover .bar .html {
+  width: 90%;
+}
+
+.skills:hover .bar .css {
+  width: 85%;
+}
+
+.skills:hover .bar .javascript {
+  width: 85%;
+}
+
+.skills:hover .bar .react {
+  width: 90%;
+}
+
+.skills:hover .bar .python {
+  width: 80%;
+}
+
+.skills:hover .bar .node {
+  width: 75%;
+}
+
+.skills:hover .bar .mongo {
+  width: 60%;
+}
+
+.skills:hover .bar .sql {
+  width: 75%;
+}
+.projects .title::after {
+  content: "";
+}
+
+.max-width .project-img {
+  width: 100%;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+.max-width .project-img:hover {
+  transform: scale(1.1);
+}
+
+/* Projects page css started  */
+
+.project-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 10px 0;
+  max-height: 500px;
+  display: flex;
+}
+
+.project-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #ff0f0f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+  color: #fff;
+}
+
+.project-container:hover .project-layer {
+  bottom: 100%;
+}
+
+.project-layer p {
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.project-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Contact page css started */
+
+.contact .title::before {
+  background: #fff;
+}
+
+.contact .title::after {
+  content: "get in touch";
+  background-color: #011420;
+}
+
+.max-width .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+
+.user-icon {
+  height: 25px;
+  width: 25px;
+  color: crimson;
+}
+
+.name-container {
+  margin-left: 30px;
+}
+
+.form-container input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid crimson;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  height: 45px;
+}
+
+.message-area {
+  padding: 8px 15px;
+  height: 90px;
+}
+
+.form-container button {
+  color: #fff;
+  display: block;
+  width: 160px !important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: crimson;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-container button:hover {
+  background: transparent;
+  border: 1px solid crimson;
+  color: crimson;
+}
+
+.scrollup-container {
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  color: #fff;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.scrollup-button {
+  height: 30px;
+  width: 30px;
+  background: crimson;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Footer page css started */
+
+footer {
+  padding: 15px 0;
+  text-align: center;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+}
+
+footer a {
+  color: crimson;
+}
+
+/* Responsive css code */
+
+@media screen and (min-width: 386px) {
+  .home,
+  .about,
+  .skills,
+  .projects,
+  .contact,
+  footer {
+    width: 100%;
+  }
+
+  nav > .logo {
+    padding-left: 30px;
+    max-width: 1300px;
+  }
+
+  .max-width {
+    padding: 0 30px;
+    max-width: 1300px;
+  }
+
+  .max-width .text-2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .max-width {
+    padding: 0 40px;
+  }
+
+  .max-width .text-2 {
+    font-size: 60px;
+  }
+
+  .max-width .text-3 {
+    font-size: 32px;
+  }
+
+  .project-layer {
+    padding: 0 1rem;
+  }
+
+  .project-layer h2 {
+    font-size: 12px;
+  }
+
+  .project-layer p {
+    font-size: 8px;
+  }
+
+  .project-layer a {
+    height: 2rem;
+    width: 2rem;
+  }
+  .progress h3 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .max-width .text-2 {
+    font-size: 70px;
+  }
+
+  .max-width .text-3 {
+    font-size: 35px;
+  }
+
+  .hire-me {
+    font-size: 23px;
+  }
+
+  .form-container {
+    position: relative;
+  }
+  .form-container .fullname {
+    width: 49%;
+  }
+
+  .form-container .email {
+    width: 49%;
+    display: inline;
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+
+  .project-layer h2 {
+    font-size: 26px;
+  }
+
+  .project-layer p {
+    font-size: 13px;
+  }
+
+  .project-layer a {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .progress h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 947px) {
+  nav > .logo {
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .navbar-all-devices {
+    display: flex;
+    background: transparent;
+    position: unset;
+    height: auto;
+    width: auto;
+    padding: 0;
+    transition: none;
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .navbar-all-devices > li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .navbar-all-devices > li > a {
+    font-size: 18px;
+    margin-left: 25px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .developer {
+    display: inline;
+    width: 35%;
+    position: absolute;
+    top: -70px;
+    right: 50px;
+  }
+
+  .skills-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skill-content {
+    width: 49%;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .app {
+    display: none;
+  }
+
+  #canvas {
+    display: block;
+  }
+
+  .max-width {
+    padding: 0 80px;
+  }
+
+  .max-width .text-2 {
+    font-size: 65px;
+  }
+
+  .max-width .text-3 {
+    font-size: 38px;
+  }
+
+  .hire-me {
+    font-size: 25px;
+  }
+
+  .contact-container {
+    display: flex;
+  }
+
+  .details-container1 {
+    width: 50%;
+  }
+
+  .details-container2 {
+    width: 50%;
+    margin-top: 0px !important;
+  }
+
+  .developer {
+    top: -90px;
+    right: 80px;
+  }
+}
