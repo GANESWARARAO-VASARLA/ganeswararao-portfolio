@@ -7,4 +7,4 @@ Highlighted my professional background, skills, and projects effectively to attr
 
 + **Technologies used:** HTML, CSS, JavaScript, React
 
-+ __[Link of the application](https://prasant-portfolio.netlify.app/)__  
++ __[Link of the application](https://ganeswararao-portfolio.vercel.app/)__  
