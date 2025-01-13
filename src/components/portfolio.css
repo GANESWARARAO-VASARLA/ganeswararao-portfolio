@@ -358,68 +358,138 @@ section .title::after {
 .skills:hover .bar .sql {
   width: 75%;
 }
-.projects .title::after {
-  content: "";
-}
-
-.max-width .project-img {
-  width: 100%;
-  transition: 0.5s ease;
-  border-radius: 10px;
-}
-
-.max-width .project-img:hover {
-  transform: scale(1.1);
-}
 
 /* Projects page css started  */
-
-.project-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  margin: 10px 0;
-  max-height: 500px;
-  display: flex;
+.projects {
+  padding: 50px 20px;
+  background-color: #f8efef20;
+  color: hsla(0, 0%, 100%, 0.957);
 }
 
-.project-layer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), #ff0f0f);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.projects .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
   text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
-  transition: 0.5s ease;
-  color: #fff;
 }
 
-.project-container:hover .project-layer {
-  bottom: 100%;
-}
-
-.project-layer p {
-  margin: 8px 0;
-  font-size: 12px;
-}
-
-.project-layer a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
+.projects .title::before {
   background: #fff;
-  border-radius: 50%;
 }
+
+.projects .title::after {
+  content: "My top projects";
+}
+
+.projects-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* Keep items side by side for large screens */
+}
+
+.project-names {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-name {
+  padding: 10px;
+  font-size: 1.4rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #f1e8e800;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.project-name:hover {
+  background: crimson;
+}
+
+.project-name.active {
+  border: 2px solid crimson;
+  background-color: #dcd2d200;
+}
+
+/* Project Details */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.project-details {
+  flex: 3;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #eae8f100;
+  border: 2px solid crimson;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  transition: opacity 0.5s ease;
+  border-left: 4px solid crimson; /* Left border */
+}
+
+.details-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid crimson;
+}
+
+.details-description {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .projects-layout {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+
+  .project-names {
+    flex: 1;
+  }
+
+  .project-details {
+    flex: 1; /* Ensure project details take full width */
+    margin-top: 20px; /* Add some space between the sections */
+  }
+}
+
+/* Large screens and above (keep side-by-side) */
+@media screen and (min-width: 1024px) {
+  .projects-layout {
+    flex-wrap: nowrap; /* Maintain side-by-side layout for larger screens */
+  }
+}
+
 
 /* Contact page css started */
 
