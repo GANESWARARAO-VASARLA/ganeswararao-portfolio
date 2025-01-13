@@ -25,9 +25,9 @@ const Contact = () => {
 
     if (fullname && email && subject && message) {
       emailjs
-        .sendForm("service_g5b9115", "template_qkx7av9", form.current, {
-          publicKey: "79qpISZQbSQpHraqG",
-        })
+      .sendForm("service_qvp5vkc", "template_jt4rq86", form.current, {
+        publicKey: "6zbKXqUcSS07I6alO",
+      })
         .then(
           () => {
             setUserData({
@@ -87,22 +87,24 @@ const Contact = () => {
             <div className="user-container">
               <FaLinkedin className="user-icon" />
               <div className="name-container">
+              <h4>Linkedin Profile</h4>
                 <a
                   style={{ color: "#fff" }}
                   href="https://www.linkedin.com/in/ganeswararaovasarla/"
                 >
-                  Linkedin Profile
+                  GANESWARARAO VASARLA
                 </a>
               </div>
             </div>
             <div className="user-container">
               <FaGithubSquare className="user-icon" />
               <div className="name-container">
+              <h4>Github Profile</h4>
                 <a
                   style={{ color: "#fff" }}
                   href="https://github.com/GANESWARARAO-VASARLA"
                 >
-                  Github Profile
+                  GANESWARARAO-VASARLA
                 </a>
               </div>
             </div>
@@ -116,7 +118,7 @@ const Contact = () => {
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <strong className="text" style={{ marginBottom: "15px" }}>
+              <strong className="text">
                 Message me
               </strong>
               <input
