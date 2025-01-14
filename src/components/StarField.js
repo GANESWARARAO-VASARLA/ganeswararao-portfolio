@@ -3,7 +3,7 @@ import { throttle } from 'lodash';
 
 const StarField = () => {
   useEffect(() => {
-    const STAR_COLOR = "#FFD700";
+    const STAR_COLOR = "#B0E0E6";
     const STAR_SIZE = 4;
     const STAR_MIN_SCALE = 0.2;
     const OVERFLOW_THRESHOLD = 50;
@@ -39,9 +39,10 @@ const StarField = () => {
     const handleMouseMove = throttle((event) => {
       touchInput = false;
       movePointer(event.clientX, event.clientY);
-    }, 50); 
+    }, 100);  // Reduced throttle time to make the movement slower (increase value for less sensitivity)
     canvas.onmousemove = handleMouseMove;
     document.onmouseleave = onMouseLeave;
+    
     function generate() {
       for (let i = 0; i < STAR_COUNT; i++) {
         stars.push({
@@ -124,8 +125,8 @@ const StarField = () => {
       velocity.tx *= 0.96;
       velocity.ty *= 0.96;
   
-      velocity.x += (velocity.tx - velocity.x) * 0.8;
-      velocity.y += (velocity.ty - velocity.y) * 0.8;
+      velocity.x += (velocity.tx - velocity.x) * 0.5;  // Reduced effect of mouse movement
+      velocity.y += (velocity.ty - velocity.y) * 0.5;  // Reduced effect of mouse movement
   
       stars.forEach((star) => {
         star.x += velocity.x * star.z;
@@ -174,8 +175,8 @@ const StarField = () => {
         let ox = x - pointerX,
           oy = y - pointerY;
   
-        velocity.tx = velocity.tx + (ox / 8) * scale * (touchInput ? 1 : -1);
-        velocity.ty = velocity.ty + (oy / 8) * scale * (touchInput ? 1 : -1);
+        velocity.tx = velocity.tx + (ox / 20) * scale * (touchInput ? 1 : -1);  // Reduced mouse movement effect
+        velocity.ty = velocity.ty + (oy / 20) * scale * (touchInput ? 1 : -1);  // Reduced mouse movement effect
       }
   
       pointerX = x;
@@ -187,7 +188,6 @@ const StarField = () => {
       pointerY = null;
     }
   }, []);
-  
 
   return <canvas id="canvas" className="canvas"></canvas>;
 };
