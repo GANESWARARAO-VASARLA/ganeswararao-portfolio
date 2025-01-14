@@ -35,7 +35,7 @@ const About = () => {
               integration. I follow the Agile methodology.
             </p>
             <a
-              href="https://drive.google.com/file/d/1ClwVfaG0KZQBHRYic9yYLAN_DzJU3kRx/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1J6Irsc9XVvKr_RQc8E3Jd15XqTlgv2t1/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               data-aos="fade-right"

@@ -25,9 +25,9 @@ const Contact = () => {
 
     if (fullname && email && subject && message) {
       emailjs
-      .sendForm("service_qvp5vkc", "template_jt4rq86", form.current, {
-        publicKey: "6zbKXqUcSS07I6alO",
-      })
+        .sendForm("service_qvp5vkc", "template_jt4rq86", form.current, {
+          publicKey: "6zbKXqUcSS07I6alO",
+        })
         .then(
           () => {
             setUserData({
@@ -87,7 +87,7 @@ const Contact = () => {
             <div className="user-container">
               <FaLinkedin className="user-icon" />
               <div className="name-container">
-              <h4>Linkedin Profile</h4>
+                <h4>Linkedin Profile</h4>
                 <a
                   style={{ color: "#fff" }}
                   href="https://www.linkedin.com/in/ganeswararaovasarla/"
@@ -99,7 +99,7 @@ const Contact = () => {
             <div className="user-container">
               <FaGithubSquare className="user-icon" />
               <div className="name-container">
-              <h4>Github Profile</h4>
+                <h4>Github Profile</h4>
                 <a
                   style={{ color: "#fff" }}
                   href="https://github.com/GANESWARARAO-VASARLA"
@@ -109,18 +109,19 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div style={{ marginTop: "20px" }} className="details-container2">
+          <div
+            className="details-container2"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <strong className="text">Message me</strong>
             <form
               className="form-container"
+              style={{ paddingTop: "10px" }}
               ref={form}
               onSubmit={handleSubmit}
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
             >
-              <strong className="text">
-                Message me
-              </strong>
               <input
                 type="text"
                 name="user_name"
