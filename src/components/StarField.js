@@ -7,7 +7,15 @@ const StarField = () => {
     const STAR_SIZE = 4;
     const STAR_MIN_SCALE = 0.2;
     const OVERFLOW_THRESHOLD = 50;
-    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 15;
+    const getStarCount = () => {
+      if (window.innerWidth <= 768) {
+        return (window.innerWidth + window.innerHeight) / 40;
+      } else {
+        return (window.innerWidth + window.innerHeight) / 10;
+      }
+    };
+  
+    let STAR_COUNT = getStarCount();
     const canvas = document.querySelector("canvas"),
       context = canvas.getContext("2d");
   
