@@ -80,7 +80,19 @@ const Contact = () => {
               <div className="name-container">
                 <h4>Email</h4>
                 <a style={{ color: "#fff" }} href="mailto:example@example.com">
-                  ganeswararao.vasarla.44@gmail.com
+                  ganeswararao.vasarla.4@gmail.com
+                </a>
+              </div>
+            </div>
+             <div className="user-container">
+              <FaLinkedin className="user-icon" />
+              <div className="name-container">
+                <h4>Linkedin Profile</h4>
+                <a
+                  style={{ color: "#fff" }}
+                  href="https://www.linkedin.com/in/ganeswararaovasarla/"
+                >
+                  GANESWARARAO VASARLA
                 </a>
               </div>
             </div>

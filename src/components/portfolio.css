@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
 :root {
-  --primary-color: rgba(88, 101, 242, 0.909); /* Soft blue for a vibrant touch */
-  --background-color: rgba(73, 67, 112, 0.18); /* Dark gray for subtle elegance */
-  --radiant-background-color: rgba(75, 68, 173, 0.292); /* Gentle light for gradient contrast */
+  --primary-color: rgb(88, 101, 242); /* Soft blue for a vibrant touch */
+  --background-color: rgba(29, 29, 31, 0.192); /* Dark gray for subtle elegance */
+  --radiant-background-color: rgba(21, 21, 35, 0.103); /* Gentle light for gradient contrast */
 }
 
 
@@ -250,7 +250,7 @@ section .title::after {
   font-size: 20px;
   color: var(--primary-color); /* Matches the theme's primary color */
   padding: 0 5px;
-  background: rgba(11, 8, 8, 0.957); /* Slightly darker for a smoother match */
+  background: rgb(13, 13, 13); /* Slightly darker for a smoother match */
   transform: translateX(-50%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 }
@@ -542,8 +542,8 @@ section .title::after {
 }
 
 .user-icon {
-  height: 25px;
-  width: 25px;
+  height: 23px;
+  width: 23px;
   color:var(--primary-color);
 }
 
