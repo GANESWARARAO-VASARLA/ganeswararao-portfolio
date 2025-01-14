@@ -9,13 +9,13 @@ const StarField = () => {
     const OVERFLOW_THRESHOLD = 50;
     const getStarCount = () => {
       if (window.innerWidth <= 768) {
-        return (window.innerWidth + window.innerHeight) / 100;
+        return 40;
       } else {
-        return (window.innerWidth + window.innerHeight) / 15;
+        return 100;
       }
     };
   
-    let STAR_COUNT = getStarCount();
+    let STAR_COUNT = getStarCount() || 40;
     const canvas = document.querySelector("canvas"),
       context = canvas.getContext("2d");
   
