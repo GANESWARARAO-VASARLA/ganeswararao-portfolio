@@ -18,7 +18,6 @@ const About = () => {
           <div className="column right">
             <div
               className="text"
-              style={{ color: "crimson" }}
               data-aos="fade-right"
             >
               I'm Ganeswararao

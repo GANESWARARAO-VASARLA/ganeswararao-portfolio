@@ -1,6 +1,14 @@
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+:root {
+  --primary-color: rgba(88, 101, 242, 0.397); /* Soft blue for a vibrant touch */
+  --background-color: rgba(73, 67, 112, 0.18); /* Dark gray for subtle elegance */
+  --radiant-background-color: rgba(75, 68, 173, 0.292); /* Gentle light for gradient contrast */
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -35,13 +43,13 @@ html {
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: #000;
+  background-color: #121212;
   background-image: radial-gradient(
       circle at top right,
-      rgba(121, 68, 154, 0.13),
+      var(--background-color),
       transparent
     ),
-    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+    radial-gradient(circle at 20% 80%, var(--radiant-background-color), transparent);
 }
 
 
@@ -73,7 +81,7 @@ nav > div > div > a {
 
 .scrolled {
   padding: 15px 0;
-  background: crimson;
+  background: var(--primary-color);
 }
 
 .scrolled > div > div > a > span {
@@ -106,7 +114,7 @@ nav > div > div > a {
 }
 
 .span-p {
-  color: crimson;
+  color:var(--primary-color);
 }
 
 .navbar-all-devices > li {
@@ -122,7 +130,7 @@ nav > div > div > a {
 }
 
 .navbar-all-devices > li > a:hover {
-  color: crimson;
+  color:var(--primary-color);
 }
 
 .navbar-all-devices > li > .hover-element:hover {
@@ -173,27 +181,27 @@ section {
 }
 
 .max-width > .text-3 > span {
-  color: crimson;
+  color: var(--primary-color);
   font-weight: 500;
 }
 
 .hire-me {
   display: inline-block;
-  background: crimson;
+  background:var(--primary-color);
   color: #fff;
   font-size: 20px;
   padding: 10px 30px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 
 .hire-me:hover {
   background: transparent;
-  border: 1px solid crimson;
-  color: crimson;
+  border: 1px solid var(--primary-color);
+  color:var(--primary-color);
 }
 
 .developer {
@@ -240,10 +248,11 @@ section .title::after {
   bottom: -8px;
   left: 50%;
   font-size: 20px;
-  color: crimson;
+  color: var(--primary-color); /* Matches the theme's primary color */
   padding: 0 5px;
-  background: #011420;
+  background: rgba(11, 8, 8, 0.957); /* Slightly darker for a smoother match */
   transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 }
 
 .about-content .text {
@@ -254,21 +263,21 @@ section .title::after {
 
 .about-content a {
   display: inline-block;
-  background: crimson;
+  background: var(--primary-color);
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 
 .about-content a:hover {
   background: transparent;
-  border: 1px solid crimson;
-  color: crimson;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Skills page css started */
@@ -286,7 +295,7 @@ section .title::after {
 }
 
 .skill-content {
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   padding: 8px;
   border-radius: 6px;
   font-size: 12px;
@@ -300,14 +309,14 @@ section .title::after {
 }
 
 .bar {
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   padding: 2px;
   border-radius: 4px;
 }
 
 .bar span {
   display: block;
-  background: crimson;
+  background: var(--primary-color);
   height: 7px;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -410,11 +419,11 @@ section .title::after {
 }
 
 .project-name:hover {
-  background: crimson;
+  background: var(--primary-color);
 }
 
 .project-name.active {
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   background-color: #dcd2d200;
 }
 
@@ -447,7 +456,7 @@ section .title::after {
   padding-bottom: 0px;
   border-radius: 8px;
   background-color: #eae8f100;
-  border: 2px solid crimson;
+  border: 2px solid var(--primary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -471,14 +480,14 @@ section .title::after {
   margin-top: auto;
   padding: 10px 0px;
   margin-bottom: 0px;
-  border-top: 2px solid crimson;
+  border-top: 2px solid var(--primary-color);
 }
 
 .details-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
-  border-bottom: 2px solid crimson;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .details-description {
@@ -517,7 +526,6 @@ section .title::after {
 
 .contact .title::after {
   content: "get in touch";
-  background-color: #011420;
 }
 
 .max-width .text {
@@ -536,7 +544,7 @@ section .title::after {
 .user-icon {
   height: 25px;
   width: 25px;
-  color: crimson;
+  color:var(--primary-color);
 }
 
 .name-container {
@@ -547,7 +555,7 @@ section .title::after {
 textarea {
   display: block;
   width: 100%;
-  border: 1px solid crimson;
+  border: 1px solid var(--primary-color);
   border-radius: 6px;
   outline: none;
   padding: 0 15px;
@@ -574,16 +582,16 @@ textarea {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
   font-family: "Poppins", sans-serif;
 }
 
 .form-container button:hover {
   background: transparent;
-  border: 1px solid crimson;
-  color: crimson;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .scrollup-container {
@@ -603,7 +611,7 @@ textarea {
 .scrollup-button {
   height: 30px;
   width: 30px;
-  background: crimson;
+  background: var(--primary-color);
   border-radius: 5px;
   padding: 5px;
 }
@@ -621,7 +629,7 @@ footer {
 }
 
 footer a {
-  color: crimson;
+  color: var(--primary-color);
 }
 
 /* Responsive css code */

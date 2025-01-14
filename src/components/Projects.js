@@ -145,6 +145,7 @@ const Projects = () => {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
+          style={{marginTop:'0px'}}
         >
           Projects
         </h2>
@@ -173,12 +174,14 @@ const Projects = () => {
             <div className="details-url">
               <strong>URL: </strong>
               <a
-                href={selectedProject.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {selectedProject.url}
-              </a>
+  href={selectedProject.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ color: "#1E90FF", textDecoration: "none" }} // Inline CSS
+>
+  {selectedProject.url}
+</a>
+
             </div>
             <div className="details-technologies">
               <strong>Technologies I Used: </strong>

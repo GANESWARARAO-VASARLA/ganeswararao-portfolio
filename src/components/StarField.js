@@ -3,11 +3,11 @@ import { throttle } from 'lodash';
 
 const StarField = () => {
   useEffect(() => {
-    const STAR_COLOR = "#34b0ee";
+    const STAR_COLOR = "#FFD700";
     const STAR_SIZE = 4;
     const STAR_MIN_SCALE = 0.2;
     const OVERFLOW_THRESHOLD = 50;
-    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 20;
+    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 15;
     const canvas = document.querySelector("canvas"),
       context = canvas.getContext("2d");
   
