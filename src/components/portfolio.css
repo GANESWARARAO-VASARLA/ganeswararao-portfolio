@@ -361,16 +361,21 @@ section .title::after {
 
 /* Projects page css started  */
 .projects {
+  display: flex;
+  flex-direction: column; /* Stack header, content, and footer vertically */
   padding: 50px 20px;
   background-color: #f8efef20;
   color: hsla(0, 0%, 100%, 0.957);
+  min-height: 100vh; /* Ensures the section occupies the full viewport height */
 }
 
 .projects .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
 }
-
 .projects .title {
   font-size: 2rem;
   font-weight: bold;
@@ -444,15 +449,34 @@ section .title::after {
 .project-details {
   flex: 3;
   padding: 20px;
+  padding-bottom: 0px;
   border-radius: 8px;
   background-color: #eae8f100;
   border: 2px solid crimson;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   opacity: 1;
   transform: translateX(0);
   visibility: visible;
   transition: opacity 0.5s ease;
-  border-left: 4px solid crimson; /* Left border */
+}
+
+.project-details.slide-in {
+  animation: slideInRight 0.5s forwards;
+}
+
+.project-details.slide-out {
+  animation: slideOutRight 0.5s forwards;
+}
+
+.project-footer {
+  margin-top: auto;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  border-top: 2px solid crimson;
 }
 
 .details-title {
@@ -470,7 +494,7 @@ section .title::after {
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
   .projects-layout {
-    flex-direction: column; /* Stack vertically on smaller screens */
+    flex-direction: column;
   }
 
   .project-names {
@@ -478,15 +502,14 @@ section .title::after {
   }
 
   .project-details {
-    flex: 1; /* Ensure project details take full width */
-    margin-top: 20px; /* Add some space between the sections */
+    flex: 1;
+    margin-top: 20px;
   }
 }
 
-/* Large screens and above (keep side-by-side) */
 @media screen and (min-width: 1024px) {
   .projects-layout {
-    flex-wrap: nowrap; /* Maintain side-by-side layout for larger screens */
+    flex-wrap: nowrap;
   }
 }
 
