@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { throttle } from 'lodash';
 
 const StarField = () => {
   useEffect(() => {
@@ -28,8 +29,20 @@ const StarField = () => {
   
     window.onresize = resize;
     window.onorientationchange = resize;  // Handle orientation change
-    canvas.onmousemove = onMouseMove;
-    canvas.ontouchmove = onTouchMove;
+    
+    const handleMouseMove = throttle((event) => {
+      touchInput = false;
+      movePointer(event.clientX, event.clientY);
+    }, 50); // Throttle to 50ms
+  
+    const handleTouchMove = throttle((event) => {
+      touchInput = true;
+      movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+      event.preventDefault();
+    }, 50); // Throttle to 50ms
+  
+    canvas.onmousemove = handleMouseMove;
+    canvas.ontouchmove = handleTouchMove;
     canvas.ontouchend = onMouseLeave;
     document.onmouseleave = onMouseLeave;
   
@@ -171,20 +184,6 @@ const StarField = () => {
   
       pointerX = x;
       pointerY = y;
-    }
-  
-    function onMouseMove(event) {
-      touchInput = false;
-  
-      movePointer(event.clientX, event.clientY);
-    }
-  
-    function onTouchMove(event) {
-      touchInput = true;
-  
-      movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-  
-      event.preventDefault();
     }
   
     function onMouseLeave() {
