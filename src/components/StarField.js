@@ -42,14 +42,14 @@ const StarField = () => {
       movePointer(event.clientX, event.clientY);
     }, 50); // Throttle to 50ms
   
-    const handleTouchMove = throttle((event) => {
-      touchInput = true;
-      movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-      event.preventDefault();
-    }, 50); // Throttle to 50ms
+    // const handleTouchMove = throttle((event) => {
+    //   touchInput = true;
+    //   movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+    //   event.preventDefault();
+    // }, 50); // Throttle to 50ms
   
     canvas.onmousemove = handleMouseMove;
-    canvas.ontouchmove = handleTouchMove;
+    //canvas.ontouchmove = handleTouchMove;
     canvas.ontouchend = onMouseLeave;
     document.onmouseleave = onMouseLeave;
   
