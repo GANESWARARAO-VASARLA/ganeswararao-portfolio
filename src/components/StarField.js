@@ -9,7 +9,7 @@ const StarField = () => {
     const OVERFLOW_THRESHOLD = 50;
     const getStarCount = () => {
       if (window.innerWidth <= 768) {
-        return (window.innerWidth + window.innerHeight) / 40;
+        return (window.innerWidth + window.innerHeight) / 70;
       } else {
         return (window.innerWidth + window.innerHeight) / 10;
       }
