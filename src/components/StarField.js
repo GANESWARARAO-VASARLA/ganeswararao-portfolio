@@ -36,23 +36,12 @@ const StarField = () => {
   
     window.onresize = resize;
     window.onorientationchange = resize;  // Handle orientation change
-    
     const handleMouseMove = throttle((event) => {
       touchInput = false;
       movePointer(event.clientX, event.clientY);
-    }, 50); // Throttle to 50ms
-  
-    // const handleTouchMove = throttle((event) => {
-    //   touchInput = true;
-    //   movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-    //   event.preventDefault();
-    // }, 50); // Throttle to 50ms
-  
+    }, 50); 
     canvas.onmousemove = handleMouseMove;
-    //canvas.ontouchmove = handleTouchMove;
-    canvas.ontouchend = onMouseLeave;
     document.onmouseleave = onMouseLeave;
-  
     function generate() {
       for (let i = 0; i < STAR_COUNT; i++) {
         stars.push({
